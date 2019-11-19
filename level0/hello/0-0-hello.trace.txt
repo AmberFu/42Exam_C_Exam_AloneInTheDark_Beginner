@@ -1,0 +1,47 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z2r9p47.42.us.org
+Darwin 17.4.0 x86_64
+$> date
+Tue Nov 19 09:07:55 PST 2019
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin17.4.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin17.4.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/exam_20191119/pfu
+
+= Git history ==================================================================
+$> git -C /var/folders/2g/kzw3lb1j6fbcgvkd_ns40df40000gp/T/tmpDxdSEt/user log --pretty='%H - %an, %ad : %s'
+6cee7de2bb62714f967996cc27227cba68dabd0d - Exam 42, Tue Nov 19 09:07:22 2019 -0800 : add hello.c
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/2g/kzw3lb1j6fbcgvkd_ns40df40000gp/T/tmpDxdSEt/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  217 Nov 19 09:07 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Nov 19 09:07 hello
+
+/var/folders/2g/kzw3lb1j6fbcgvkd_ns40df40000gp/T/tmpDxdSEt/user/hello:
+total 8
+-rw-r--r--  1 deepthought  deepthought  974 Nov 19 09:07 hello.c
+ 
+= hello ========================================================================
+$> gcc -Wextra -Wall -Werror hello.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./3u56ih92i82girpy2qhzglp9 test1.prm
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================

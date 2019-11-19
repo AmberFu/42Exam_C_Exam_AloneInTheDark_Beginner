@@ -5,29 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/01 09:01:21 by exam              #+#    #+#             */
-/*   Updated: 2019/10/01 09:05:01 by exam             ###   ########.fr       */
+/*   Created: 2019/11/19 09:03:34 by exam              #+#    #+#             */
+/*   Updated: 2019/11/19 09:06:45 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+int	main()
 {
-	write(1, &c, 1);
-}
-
-void	ft_putstr(char *s)
-{
-	while (*s != '\0')
-	{
-		ft_putchar(*s);
-		s++;
-	}
-}
-
-int		main()
-{
-	ft_putstr("Hello World!\n");
+	write(1, "Hello World!\n", 13);
 	return (0);
 }
