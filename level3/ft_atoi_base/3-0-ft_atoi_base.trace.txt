@@ -1,0 +1,95 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z3r4p7.42.us.org
+Darwin 17.5.0 x86_64
+$> date
+Tue Nov 19 11:03:50 PST 2019
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.1.0 (clang-902.0.39.1)
+Target: x86_64-apple-darwin17.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 9.1.0 (clang-902.0.39.1)
+Target: x86_64-apple-darwin17.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/exam_20191119/pfu
+
+= Git history ==================================================================
+$> git -C /var/folders/6t/lp_wg3r515q75gtvllym3xmw0000gp/T/tmpsoMU4T/user log --pretty='%H - %an, %ad : %s'
+c37e6ea8d1b07d00ec4e5b708d0e1cbf0c9d05a3 - Exam 42, Tue Nov 19 11:03:40 2019 -0800 : add ft_atoi_base.c
+85ab30dc310be1cfb396b86432223fc156b3862f - Exam 42, Tue Nov 19 09:56:18 2019 -0800 : add ft_strpbrk.c
+7a563b378891ccf5d4b859a03218678f6c8324dd - Exam 42, Tue Nov 19 09:13:50 2019 -0800 : add ft_swap.c
+6cee7de2bb62714f967996cc27227cba68dabd0d - Exam 42, Tue Nov 19 09:07:22 2019 -0800 : add hello.c
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/6t/lp_wg3r515q75gtvllym3xmw0000gp/T/tmpsoMU4T/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  964 Nov 19 11:03 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Nov 19 11:03 ft_atoi_base
+drwxr-xr-x  3 deepthought  deepthought  102 Nov 19 11:03 ft_strpbrk
+drwxr-xr-x  3 deepthought  deepthought  102 Nov 19 11:03 ft_swap
+drwxr-xr-x  3 deepthought  deepthought  102 Nov 19 11:03 hello
+
+/var/folders/6t/lp_wg3r515q75gtvllym3xmw0000gp/T/tmpsoMU4T/user/ft_atoi_base:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1711 Nov 19 11:03 ft_atoi_base.c
+
+/var/folders/6t/lp_wg3r515q75gtvllym3xmw0000gp/T/tmpsoMU4T/user/ft_strpbrk:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1257 Nov 19 11:03 ft_strpbrk.c
+
+/var/folders/6t/lp_wg3r515q75gtvllym3xmw0000gp/T/tmpsoMU4T/user/ft_swap:
+total 8
+-rw-r--r--  1 deepthought  deepthought  974 Nov 19 11:03 ft_swap.c
+
+/var/folders/6t/lp_wg3r515q75gtvllym3xmw0000gp/T/tmpsoMU4T/user/hello:
+total 8
+-rw-r--r--  1 deepthought  deepthought  974 Nov 19 11:03 hello.c
+ 
+= ft_atoi_base =================================================================
+$> gcc -Wextra -Wall -Werror ft_atoi_base.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./ussfvu1sv6ihm893qfu0zysx 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./wc8jwaff9tqiqvbm5oy5dsum "21" "2313" "12"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./nrnbwijb5f5vca3t1r872qom "2147483647" "10"
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./wtzefje2fmhtvtqtba440wyb "-2147483648" "10"
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./kccj8efkdj9bjmgb5hw0291d "0" "2"
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./189nyexmhnelusdjur5s5d51 "--223" "10"
+$> diff -U 3 user_output_test6 test6.output | cat -e
+--- user_output_test6	2019-11-19 11:03:53.000000000 -0800$
++++ test6.output	2019-11-19 11:03:53.000000000 -0800$
+@@ -1 +1 @@$
+--223$
++0$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 0 ===============================================================
