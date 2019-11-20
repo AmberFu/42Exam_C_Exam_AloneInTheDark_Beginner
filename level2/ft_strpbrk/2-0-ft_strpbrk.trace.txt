@@ -1,0 +1,104 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z2r7p48.42.us.org
+Darwin 17.4.0 x86_64
+$> date
+Tue Nov 19 09:56:29 PST 2019
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 10.0.0 (clang-1000.10.44.4)
+Target: x86_64-apple-darwin17.4.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 10.0.0 (clang-1000.10.44.4)
+Target: x86_64-apple-darwin17.4.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/exam_20191119/pfu
+
+= Git history ==================================================================
+$> git -C /var/folders/37/68j0p7m53mn32f8b4x4jc6m80000gp/T/tmp4h82Kf/user log --pretty='%H - %an, %ad : %s'
+85ab30dc310be1cfb396b86432223fc156b3862f - Exam 42, Tue Nov 19 09:56:18 2019 -0800 : add ft_strpbrk.c
+7a563b378891ccf5d4b859a03218678f6c8324dd - Exam 42, Tue Nov 19 09:13:50 2019 -0800 : add ft_swap.c
+6cee7de2bb62714f967996cc27227cba68dabd0d - Exam 42, Tue Nov 19 09:07:22 2019 -0800 : add hello.c
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/37/68j0p7m53mn32f8b4x4jc6m80000gp/T/tmp4h82Kf/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  699 Nov 19 09:56 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Nov 19 09:56 ft_strpbrk
+drwxr-xr-x  3 deepthought  deepthought  102 Nov 19 09:56 ft_swap
+drwxr-xr-x  3 deepthought  deepthought  102 Nov 19 09:56 hello
+
+/var/folders/37/68j0p7m53mn32f8b4x4jc6m80000gp/T/tmp4h82Kf/user/ft_strpbrk:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1257 Nov 19 09:56 ft_strpbrk.c
+
+/var/folders/37/68j0p7m53mn32f8b4x4jc6m80000gp/T/tmp4h82Kf/user/ft_swap:
+total 8
+-rw-r--r--  1 deepthought  deepthought  974 Nov 19 09:56 ft_swap.c
+
+/var/folders/37/68j0p7m53mn32f8b4x4jc6m80000gp/T/tmp4h82Kf/user/hello:
+total 8
+-rw-r--r--  1 deepthought  deepthought  974 Nov 19 09:56 hello.c
+ 
+= ft_strpbrk ===================================================================
+$> gcc -Wextra -Wall -Werror main.c ft_strpbrk.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./jp4he9abefbz9m8jx06vre85 'chat' 'chien'
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./09c3wrisfow16uaci45xlst1 'ABCDEFG019874' 'ABCD'
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./kmyym5x29ty119gzbuekz94y ' ' '1234567890'
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./q12pifyg8tdqvw5nbfutyvke '1234567890' ' '
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./o4cdebioj2rwhr3devom1xbk ';fjhbsdnc xwpusgrhbs' 'opsiyhgvdzbnciox'
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./47co4qdw9xm1x7jrrjuu48r9 '0987654321' '1234567890'
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./2lk32et059j6q6ebpu9g0yoc '/bin/ls/' '/bien/ls/~'
+$> diff -U 3 user_output_test7 test7.output | cat -e
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./u0b81mo5yy68sejng13f4psx '~`,./<>?!@#$%^&*()-+_{}[]|\' 'abcdefghijklmnopqrstuvzxyz'
+$> diff -U 3 user_output_test8 test8.output | cat -e
+
+Diff OK :D
+= Test 9 ===================================================
+$> ./jstsi0cv45liyxvwkuld7myv 'Farenheit' 'Degree'
+$> diff -U 3 user_output_test9 test9.output | cat -e
+
+Diff OK :D
+= Test 10 ==================================================
+$> ./v2rdljcoqpop685mm9u0ttfh 'Et quoniam inedia gravi adflictabantur, locum petivere Paleas nomine, vergentem in mare, valido muro firmatum, ubi conduntur nunc usque commeatus distribui militibus omne latus Isauriae defendentibus adsueti. circumstetere igitur hoc munimentum per triduum et trinoctium et cum neque adclivitas ipsa sine discrimine adiri letali, nec cuniculis quicquam geri posset, nec procederet ullum obsidionale commentum, maesti excedunt postrema vi subigente maiora viribus adgressuri.' 'Et quoniam inedia gravi adflictabantur, locum petivere Paleas nomine, vergentem in mare, valido muro firmatum, ubi conduntur nunc usque commeatus distribui militibus omne latus Isauriae defendentibus adsueti. circumstetere igitur hoc munimentum per triduum et trinoctium et cum neque adclivitas ipsa sine discrimine adiri letali, nec cuniculis quicquam geri posset, nec procederet ullum obsidionale commentum, maesti excedunt postrema vi subigente maiora viribus adgressuri.'
+$> diff -U 3 user_output_test10 test10.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================
